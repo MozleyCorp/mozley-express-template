@@ -1,0 +1,35 @@
+{
+	"private": true,
+  "name": "mozley-express-template",
+	"version": "1.0.0",
+	"description": "",
+	"homepage": "https://bitbucket.org/mozley/PROJECT/src/main/README.md",
+	"license": "SEE LICENSE IN LICENSE",
+	"author": "Friendly Giraffe <friendly.giraffe@mozley.biz> (mozley.biz)",
+	"repository": {
+		"type": "git",
+		"url": "https://bitbucket.org/mozley/PROJECT.git"
+	},
+	"bugs": {
+		"url": "https://mozley.atlassian.net/browse/PROJECT",
+		"email": "friendly.giraffe@mozley.biz"
+	},
+	"config": {},
+	"main": "src/server.js",
+	"engines": {
+		"node": "12.18",
+		"npm": "6.14"
+	},
+	"scripts": {
+		"start": "node .",
+		"start-dev": "nodemon .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+	},
+  "dependencies": {
+    "@mozley/sdk-express": "0.0.0",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

@@ -1,0 +1,5 @@
+*.min.*
+
+# TODO: Once we're ready to ban prettier:
+## *
+## **
