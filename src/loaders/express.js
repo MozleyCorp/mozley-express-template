@@ -11,8 +11,9 @@ const config = require("../config")
 module.exports = async () => {
 	const app = mzly.app({
 		environment: process.env.NODE_ENV,
-		clientId: "",
-		clientSecret: config.client_secret,
+		clientId: config.client.c_id,
+		clientSecret: config.client.c_secret,
+		style: "api",
 		// ⚠ CHANGE THIS TO YOUR APP DOMAIN
 		frontendOrigin: "example.com",
 		// Change this to what should be your apps' redirect_url. Make sure you add

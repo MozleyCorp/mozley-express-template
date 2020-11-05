@@ -19,9 +19,13 @@ module.exports = {
 	},
 
 	/**
-	 * Client secret for Mozley services
+	 * Client ID and Client Secret
+	 * for Mozley Network
 	 */
-	client_secret: process.env.CLIENT_SECRET,
+	client: {
+		c_id: process.env.CLIENT_ID || "",
+		c_secret: process.env.CLIENT_SECRET || "",
+	},
 
 	/**
 	 * API-related configurations
