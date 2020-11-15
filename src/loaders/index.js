@@ -1,8 +1,10 @@
 "use strict"
 
 const Logger = require("../logger")
+const { Container } = require("typedi")
 
 const mongoLoader = require("./mongo")
+const agendaLoader = require("./agenda")
 const expressLoader = require("./express")
 
 module.exports = async () => {
@@ -10,12 +12,17 @@ module.exports = async () => {
 	Logger.info("✌ DB loaded and connected!")
 
 	const models = require("../models")
+	Container.set("models", models)
 	Logger.info("✌ Mongoose models required and loaded!")
 
+	const agenda = await agendaLoader(mongoConnection)
+	Container.set("agenda", agenda)
+	Logger.info("✌ Agenda has been loaded!")
+
 	const app = await expressLoader()
-	app.mongo = mongoConnection
 	app.models = models
-	Logger.info("✌ Express app created")
+	app.agenda = agenda
+	Logger.info("✌ Express app created!")
 
 	return app
 }

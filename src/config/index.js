@@ -34,6 +34,23 @@ module.exports = {
 	},
 
 	/**
+	 * Agendajs.com - We use agenda as a task/job scheduler
+	 */
+	agenda: {
+		dbCollection: process.env.AGENDA_DB_COLLECTION || "agenda",
+		poolTime: process.env.AGENDA_POOL_TIME || "5 seconds",
+		concurrency: parseInt(process.env.AGENDA_CONCURRENCY, 10) || 20,
+
+		/**
+		 * Agendash config
+		 */
+		dash: {
+			userName: "agendash",
+			password: "123456",
+		},
+	},
+
+	/**
 	 * API-related configurations
 	 */
 	api: {},

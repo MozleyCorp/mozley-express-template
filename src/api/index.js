@@ -1,5 +1,7 @@
 const v1 = require("./v1")
+const agendash = require("./agendash")
 
 module.exports = async (app) => {
-	await v1(app)
+	agendash(app)
+	v1(app)
 }

@@ -8,4 +8,6 @@ module.exports = async () => {
 		useCreateIndex: true,
 		useUnifiedTopology: true,
 	})
+
+	return connection.connection.db
 }
