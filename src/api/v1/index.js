@@ -1,10 +1,10 @@
 const { Router } = require("express")
 const router = Router()
 
-const stats = require("./stats")
+const heroes = require("./heroes")
 
 module.exports = async (app) => {
 	app.use("/v1", router)
 
-	await stats(router)
+	await heroes(router)
 }

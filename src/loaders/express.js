@@ -2,7 +2,6 @@
 
 const mzly = require("@mozley/sdk-express")
 
-const api = require("../api")
 const config = require("../config")
 // Adding app-wide middleware:
 /// const { middlewareName } = require("../middlewares")
@@ -23,7 +22,7 @@ module.exports = async () => {
 		customMiddleware: [],
 		loadRoutes: (app) => {
 			// Index (for APIs)
-			app.all("/", (req, res) =>
+			app.get("/", (req, res) =>
 				res
 					.status(200)
 					.json({
@@ -32,7 +31,9 @@ module.exports = async () => {
 					.end()
 			)
 
-			api(app)
+			// We don't require this at the top level to prevent race conditions with
+			//  regards to database models
+			require("../api")(app)
 		},
 	})
 

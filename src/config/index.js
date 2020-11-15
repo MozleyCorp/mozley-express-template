@@ -12,6 +12,12 @@ module.exports = {
 	port: parseInt(process.env.PORT, 10),
 
 	/**
+	 * Connection URL for MongoDB
+	 * Do not use SQL-based databases
+	 */
+	databaseURL: process.env.DATABASE_URL,
+
+	/**
 	 * Used by Winston logger (pulled from the sdk)
 	 */
 	logs: {
