@@ -26,7 +26,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {
-		"@mozley/sdk-express": "0.0.0",
+		"@mozley/sdk-express": "^0.1.0",
 		"agenda": "^3.1.0",
 		"agendash": "^1.0.0",
 		"dotenv": "8.2.0",
