@@ -3,6 +3,7 @@
 const Logger = require("../logger")
 const { Container } = require("typedi")
 
+const eventLoader = require("./events")
 const mongoLoader = require("./mongo")
 const agendaLoader = require("./agenda")
 const expressLoader = require("./express")
@@ -23,6 +24,9 @@ module.exports = async () => {
 	app.models = models
 	app.agenda = agenda
 	Logger.info("✌ Express app created!")
+
+	await eventLoader()
+	Logger.info("✌ Events are listening!")
 
 	return app
 }
