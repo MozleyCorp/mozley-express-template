@@ -23,7 +23,8 @@
 	"scripts": {
 		"start": "node .",
 		"start-dev": "nodemon .",
-		"test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "standard",
+		"test": "npm run lint && echo WARN: no test specified"
 	},
 	"dependencies": {
 		"@mozley/sdk-express": "^0.1.4",
