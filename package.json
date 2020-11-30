@@ -32,10 +32,10 @@
 		"dotenv": "8.2.0",
 		"express-basic-auth": "^1.2.0",
 		"mongoose": "^5.10.14",
-		"standard": "^16.0.3",
 		"typedi": "^0.8.0"
 	},
 	"devDependencies": {
-		"nodemon": "2.0.6"
+    "nodemon": "2.0.6",
+    "standard": "^16.0.3"
 	}
 }
