@@ -1,5 +1,7 @@
 # Mozley Express Template
 
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+
 Write a clear title for your README. While you're here, introduce your project.
 
 Include any limitations up front so the user can evaluate whether the project meets all their
